@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
+    <div class="space-y-4 mt-4 mx-4 md:my-6 md:mx-6 ">
       <h2 class="text-2xl font-bold text-gray-800 text-center">What Users Say</h2>
       <ReviewSection />
     </div>
@@ -33,7 +33,10 @@
 </template>
   <script setup>
 useHead({
-  title: "Home",
+  title: "Effortlessly Generate Laravel CRUD with a Single Command!",
+  meta: [
+    {description: "Effortlessly Generate Laravel CRUD with a Single Command!"}
+  ]
 });
 const features = [
   {

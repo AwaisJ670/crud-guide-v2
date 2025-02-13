@@ -5,13 +5,15 @@
       :class="{ 'md:grid-cols-2': props.preview }"
     >
       <!-- Command Section -->
-      <div
-        class="mockup-code bg-gray-900 rounded-lg shadow-lg"
-      >
-        <pre><code>
-            <span class="whitespace-pre font-mono text-sm" v-for="(char, index) in typedOutput" :key="index">{{ char }}</span>
-          </code></pre>
+      <div class="mockup-code rounded-lg shadow-lg">
+        <pre data-prefix="~"><code v-html="typedOutput"></code></pre>
       </div>
+
+      <!-- <div class="mockup-code">
+        <pre data-prefix="$"><code>{{ props.commands }}</code></pre>
+        <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+      </div> -->
 
       <!-- Preview Section (Only if there is a preview) -->
       <div v-if="props.preview" class="border p-4 rounded-lg bg-gray-100 shadow">
@@ -23,7 +25,7 @@
 </template>
   
   <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
   commands: Array, // Command array
@@ -35,14 +37,13 @@ const typingSpeed = 100;
 const delayBetweenSteps = 1200;
 
 const runCommands = async () => {
-  typedOutput.value = []; // Reset output
+  typedOutput.value = ""; // Reset output
   for (const command of props.commands) {
     for (const char of command) {
-      // Loop through characters
-      typedOutput.value += char;
+      typedOutput.value += char === " " ? "&nbsp;" : char; // Prevent space removal
       await new Promise((resolve) => setTimeout(resolve, typingSpeed));
     }
-    typedOutput.value += "\n"; // Add newline after command
+    typedOutput.value += "<br>"; // Preserve line breaks
     await new Promise((resolve) => setTimeout(resolve, delayBetweenSteps));
   }
 };

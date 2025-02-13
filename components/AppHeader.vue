@@ -15,9 +15,8 @@
 
       <!-- GitHub Link -->
       <div>
-        <a class="flex items-center space-x-2" href="https://github.com/AwaisJ670/laravel-crud-bot" target="_blank" rel="noopener noreferrer">
+        <a class="" href="https://github.com/AwaisJ670/laravel-crud-bot" target="_blank" rel="noopener noreferrer">
           <img src="/github.svg">
-          <span class="text-white font-semibold">{{ starsCount }}</span>
         </a>
       </div>
 
@@ -44,8 +43,6 @@
 <script setup>
 import { ref, computed } from "vue";
 const isMenuOpen = ref(false)
-const { data } = useFetch("https://api.github.com/repos/AwaisJ670/laravel-crud-bot");
-const starsCount = computed(() => data.value?.stargazers_count || 0);
 
 const toggleMenu = () =>{
   isMenuOpen.value = !isMenuOpen.value

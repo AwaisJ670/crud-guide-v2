@@ -10,29 +10,29 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const reviews = ref([
   {
     name: "Awais Javaid",
-    rating: 6,
+    rating: 5,
     text: "Amazing package! It saved me a lot of time.",
   },
   {
     name: "Usama Manzoor",
-    rating: 5,
+    rating: 4,
     text: "Very useful, but could use some improvements.",
   },
   {
     name: "Bilawal Tahir",
-    rating: 6,
+    rating: 5,
     text: "Highly recommended for Laravel developers!",
   },
   {
     name: "Emma Johnson",
-    rating: 6,
+    rating: 5,
     text: "Super easy to use and works perfectly!",
   },
 ]);
 
 // Function to Generate Star Rating
 const getStarClass = (index, rating) => {
-  return index < rating ? "text-yellow-400" : "text-gray-300";
+  return index <= rating ? "text-yellow-400" : "text-gray-300";
 };
 </script>
 
@@ -51,11 +51,11 @@ const getStarClass = (index, rating) => {
       <SwiperSlide v-for="(review, index) in reviews" :key="index">
         <div class="flex flex-col items-center text-center p-6 border rounded-lg bg-gray-50 shadow-lg">
           <!-- Review Image -->
-          <!-- <img
-            :src="review.image"
+          <img
+            src="/person.svg"
             alt="User Image"
-            class="w-16 h-16 rounded-full border-2 border-gray-300"
-          /> -->
+            class="w-16 h-16 rounded-full border-2 border-red-300"
+          />
           
           <!-- Review Name -->
           <h3 class="mt-4 font-semibold text-lg">{{ review.name }}</h3>
@@ -68,7 +68,7 @@ const getStarClass = (index, rating) => {
           </div>
 
           <!-- Review Text -->
-          <p class="text-gray-600 mt-2 max-w-md text-sm md:text-lg">{{ review.text }}</p>
+          <p class="text-gray-600 my-3 max-w-md text-sm md:text-lg">{{ review.text }}</p>
         </div>
       </SwiperSlide>
     </Swiper>
