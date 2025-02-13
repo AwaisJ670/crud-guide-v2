@@ -1,14 +1,14 @@
 <template>
-  <nav class="bg-gray-800 p-4">
+  <nav class="bg-gray-800 p-4 sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
       <!-- Company Name -->
       <div class="text-white text-lg font-bold">
-        CodeBider
+        <NuxtLink to="/" class="text-gray-300 hover:text-white">CodeBider</NuxtLink>
       </div>
 
       <!-- Center Links -->
-      <div class="hidden md:flex space-x-4">
-        <NuxtLink to="/" class="text-gray-300 hover:text-white">Home</NuxtLink>
+      <div class="hidden md:flex space-x-7">
+        <NuxtLink to="/" class="text-gray-300 hover:text-white">Introduction</NuxtLink>
         <NuxtLink to="/installation" class="text-gray-300 hover:text-white">Installation</NuxtLink>
         <NuxtLink to="/usage" class="text-gray-300 hover:text-white">Usage</NuxtLink>
       </div>
@@ -33,7 +33,7 @@
     <!-- Mobile Menu -->
     <div v-if="isMenuOpen" class="md:hidden">
       <div class="flex flex-col space-y-2 mt-2">
-        <NuxtLink to="/" class="block text-gray-300 hover:text-white">Home</NuxtLink>
+        <NuxtLink to="/" class="block text-gray-300 hover:text-white">Introduction</NuxtLink>
         <NuxtLink to="/installation" class="block text-gray-300 hover:text-white">Installation</NuxtLink>
         <NuxtLink to="/usage" class="block text-gray-300 hover:text-white">Usage</NuxtLink>
       </div>

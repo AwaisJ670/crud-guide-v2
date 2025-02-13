@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index:100;
   }
   .whatsapp-float img {
     width: 40px;

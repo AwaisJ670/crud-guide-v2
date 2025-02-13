@@ -31,7 +31,25 @@ const cardData = computed(() => [
 </script>
 
 <template>
-  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:grid-cols-4">
+          <div v-for="(card,index) in cardData" :key="index"
+            class="overflow-hidden rounded-xl divide-y divide-gray-200 ring-2 ring-gray-200 shadow bg-white  relative group hover:ring-2 hover:ring-amber-500  hover:bg-gray-100/50"
+          >
+            <div class="flex-1 px-4 text-center py-5 sm:p-6">
+              <h2
+                class="text-gray-900 text-base font-semibold text-center"
+              >
+                {{ card.title }}
+              </h2>
+              <div class="text-[50px] text-gray-500 mt-1" :style="{ color: card.color }">
+                {{card.count}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+  
+  <!-- <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
     <div v-for="(card, index) in cardData" :key="index"
       class="p-6 bg-white shadow-lg rounded-lg text-center border-2"
       :style="{ borderColor: card.color }">
@@ -40,5 +58,5 @@ const cardData = computed(() => [
         {{ card.count }}
       </p>
     </div>
-  </div>
+  </div> -->
 </template>
