@@ -15,8 +15,9 @@
 
       <!-- GitHub Link -->
       <div>
-        <a href="https://github.com/AwaisJ670/laravel-crud-bot" target="_blank" rel="noopener noreferrer">
+        <a class="flex items-center space-x-2" href="https://github.com/AwaisJ670/laravel-crud-bot" target="_blank" rel="noopener noreferrer">
           <img src="/github.svg">
+          <span class="text-white font-semibold">{{ starsCount }}</span>
         </a>
       </div>
 
@@ -34,24 +35,19 @@
     <div v-if="isMenuOpen" class="md:hidden">
       <div class="flex flex-col space-y-2 mt-2">
         <NuxtLink to="/" class="block text-gray-300 hover:text-white">Home</NuxtLink>
+        <NuxtLink to="/installation" class="block text-gray-300 hover:text-white">Installation</NuxtLink>
         <NuxtLink to="/usage" class="block text-gray-300 hover:text-white">Usage</NuxtLink>
-        <NuxtLink to="/installations" class="block text-gray-300 hover:text-white">Installations</NuxtLink>
       </div>
     </div>
   </nav>
 </template>
+<script setup>
+import { ref, computed } from "vue";
+const isMenuOpen = ref(false)
+const { data } = useFetch("https://api.github.com/repos/AwaisJ670/laravel-crud-bot");
+const starsCount = computed(() => data.value?.stargazers_count || 0);
 
-<script>
-export default {
-  data() {
-    return {
-      isMenuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
-  },
+const toggleMenu = () =>{
+  isMenuOpen.value = !isMenuOpen.value
 };
 </script>

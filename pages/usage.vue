@@ -1,8 +1,8 @@
 <template>
     <div class="mx-auto space-y-8">
-      <div class="space-y-4">
-        <h1 class="text-4xl font-bold">Usage Guide</h1>
-        <p class="text-lg text-muted-foreground">
+      <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
+        <h1 class="text-lg md:text-4xl text-center font-bold capitalize">Usage Guide</h1>
+        <p class="text-sm md:text-lg text-center text-muted-foreground text-center">
           Learn how to use Laravel CRUD Bot effectively
         </p>
         <p class="text-md text-muted-foreground">
@@ -17,7 +17,7 @@
         </ul>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
         <h2 class="text-2xl font-semibold">Basic Usage</h2>
 
         <div v-for="(step, index) in steps.slice(0, currentStep + 1)" :key="index">

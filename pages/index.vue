@@ -1,16 +1,21 @@
 <template>
   <div class="mx-auto space-y-8">
     <div class="space-y-4">
-      <h1 class="text-4xl font-bold capitalize">
+      <h1 class="text-lg md:text-4xl text-center font-bold capitalize">
         Automating CRUD generation tool
       </h1>
-      <p class="text-lg text-muted-foreground">
+
+      <p class="text-sm md:text-lg text-center text-muted-foreground">
         Effortlessly Generate Laravel CRUD with a Single Command!
       </p>
     </div>
 
-    <div class="space-y-4">
-      <h2 class="text-2xl font-semibold">Features</h2>
+    <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
+      <h2 class="text-2xl font-bold text-gray-800 text-center">Statistics</h2>
+      <PackageStats />
+    </div>
+    <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
+      <h2 class="text-2xl font-bold text-gray-800 text-center">Features</h2>
       <div class="grid gap-4 md:grid-cols-2">
         <div v-for="(feature, index) in features" :key="index">
           <FeatureCard
@@ -19,6 +24,10 @@
           />
         </div>
       </div>
+    </div>
+    <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
+      <h2 class="text-2xl font-bold text-gray-800 text-center">What Users Say</h2>
+      <ReviewSection />
     </div>
   </div>
 </template>

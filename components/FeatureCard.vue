@@ -10,8 +10,8 @@ const props=defineProps({
   <div
     class="relative p-1 rounded-lg bg-gradient-to-r from-black via-red-500 to-yellow-500 animate-border"
   >
-    <div class="relative bg-white p-6 rounded-lg shadow-lg">
-      <h2 class="text-xl font-bold text-gray-800">{{ props.title }}</h2>
+    <div class="relative bg-white p-6 rounded-lg shadow-xl">
+      <h2 class="text-lg md:text-xl font-bold text-gray-800">{{ props.title }}</h2>
       <p class="text-gray-600 mt-2">
         {{props.description}}
       </p>

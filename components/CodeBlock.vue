@@ -16,7 +16,7 @@
       <!-- Preview Section (Only if there is a preview) -->
       <div v-if="props.preview" class="border p-4 rounded-lg bg-gray-100 shadow">
           <p class="font-semibold">Preview</p>
-          <img :src="props.preview" alt="Preview Image" class="rounded-md shadow-lg"/>
+          <img :src="props.preview" alt="Preview Image" class="rounded-md shadow-lg" @click="openImageInNewTab"/>
         </div>
       </div>
     </div>
@@ -47,6 +47,11 @@ const runCommands = async () => {
   }
 };
 
+const openImageInNewTab = () => {
+  if (props.preview) {
+    window.open(props.preview, '_blank');
+  }
+};
 onMounted(() => {
   runCommands();
 });
