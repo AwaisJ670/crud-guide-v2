@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-gray-800 p-4 sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto py-8 lg:py-4 flex justify-between items-center">
       <!-- Company Name -->
       <div class="text-white text-lg font-bold">
         <NuxtLink to="/" class="text-gray-300 hover:text-white">CodeBider</NuxtLink>
@@ -16,7 +16,7 @@
       <!-- GitHub Link -->
       <div>
         <a class="" href="https://github.com/AwaisJ670/laravel-crud-bot" target="_blank" rel="noopener noreferrer">
-          <img src="/github.svg">
+          <img src="/git.svg" width="30" height="30">
         </a>
       </div>
 

@@ -50,16 +50,32 @@
                   Get Started
                   <i class="fa-solid fa-arrow-right flex-shrink-0 h-5 w-5"></i>
                 </NuxtLink>
-                <button
-                  type="button"
-                  class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 text-gray-700  hover:text-gray-900 hover:bg-gray-50 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center"
-                >
-                  CRUD in 100 Seconds
-                  <i
-                    class="fa-regular fa-circle-play flex-shrink-0 h-5 w-5"
-                  ></i>
-                </button>
+                  <button
+                  @click="openModal"
+                    type="button"
+                    class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 text-gray-700  hover:text-gray-900 hover:bg-gray-50 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center"
+                  >
+                    CRUD in 100 Seconds
+                    <i
+                      class="fa-regular fa-circle-play flex-shrink-0 h-5 w-5"
+                    ></i>
+                  </button>
               </div>
+              <dialog id="videoModal" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl bg-black p-0">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <iframe 
+                      class="w-full h-64 md:h-80 lg:h-96"
+                      :src="videoUrl"
+                      frameborder="0"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
               <label class="w-full">
                 <CodeBlock :commands="command" />
               </label>
@@ -184,4 +200,14 @@ const features = [
       "If you edit fields in the migration file, these changes will also be applied to dependent components like the $fillable property in models.",
   },
 ];
+
+const videoUrl = ref("https://www.youtube.com/embed/rU22-1g4Uwk"); // Replace with your video URL
+
+const openModal = () => {
+  document.getElementById("videoModal").showModal();
+};
+
+const closeModal = () => {
+  document.getElementById("videoModal").close();
+};
 </script>
