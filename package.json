@@ -12,6 +12,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@nuxtjs/tailwindcss": "^6",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "daisyui": "^3",
     "nuxt": "^3.15.4",
     "swiper": "^11.2.3",
