@@ -1,5 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen">
+    <Head>
+      <meta name="google-site-verification" content="R9VhZCOjFWe4g4RBv1OZJBvHWdyufglt0oM8yb_qMJA" />
+    </Head>
     <AppHeader />
     <main class="container mx-auto flex-1 my-4">
       <slot />
