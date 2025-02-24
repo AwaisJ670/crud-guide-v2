@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss','@nuxtjs/sitemap','@nuxtjs/robots','@nuxtjs/google-gtag'],
+  modules: ['@nuxtjs/tailwindcss','@nuxtjs/sitemap','@nuxtjs/robots'],
   plugins: ["~/plugins/botpress.client"],
   sitemap: {
     hostname: 'https://laravel-crud-guide.vercel.app',
@@ -14,11 +14,4 @@ export default defineNuxtConfig({
     Allow: '/',
     Sitemap: 'https://laravel-crud-guide.vercel.app/sitemap.xml',
   },
-  runtimeConfig: {
-    public: {
-      gtag: {
-        id: 'G-FJ8C451G3P', // Replace with your Measurement ID
-      }
-    }
-  }
 })
