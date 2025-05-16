@@ -148,7 +148,7 @@ const { data: packagistData } = useFetch(
 const latestVersion = computed(() => {
   if (!packagistData.value?.package?.versions) return "N/A";
   const versions = Object.keys(packagistData.value.package.versions);
-  return versions[versions.length - 1]; // First key is the latest version
+  return versions[1]; // First key is the latest version
 });
 useHead({
   title: "Effortlessly Generate Laravel CRUD with a Single Command!",
