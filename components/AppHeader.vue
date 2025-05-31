@@ -3,7 +3,10 @@
     <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto py-8 lg:py-4 flex justify-between items-center">
       <!-- Company Name -->
       <div class="text-white text-lg font-bold">
-        <NuxtLink to="/" class="text-gray-300 hover:text-white">CodeBider</NuxtLink>
+        <NuxtLink to="/" class="text-gray-300 hover:text-white">
+          <!-- <img src="/logo.jpeg" alt="Logo" class="h-8 inline-block mr-2"> -->
+           CodeBider
+        </NuxtLink>
       </div>
 
       <!-- Center Links -->
@@ -11,6 +14,7 @@
         <NuxtLink to="/" class="text-gray-300 hover:text-white">Introduction</NuxtLink>
         <NuxtLink to="/installation" class="text-gray-300 hover:text-white">Installation</NuxtLink>
         <NuxtLink to="/usage" class="text-gray-300 hover:text-white">Usage</NuxtLink>
+        <!-- <NuxtLink to="/customization" class="text-gray-300 hover:text-white">Customization</NuxtLink> -->
       </div>
 
       <!-- GitHub Link -->

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="py-24 sm:py-32 md:py-40 relative md:pb-24"
+      class="py-8 relative "
     >
       <div
         class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col"
@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-    <div class="py-24 sm:py-32">
+    <div class="py-8">
       <div
         class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col"
       >
@@ -102,7 +102,7 @@
         <PackageStats />
       </div>
     </div>
-    <div class="py-24 sm:py-32">
+    <div class="py-8">
       <div
         class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col"
       >
@@ -137,7 +137,9 @@
         </div>
       </div>
     </div>
-    <ReviewsSection />
+    <div class="py-8">
+      <ReviewsSection />
+    </div>
   </div>
 </template>
 <script setup>

@@ -35,46 +35,44 @@ const reviews = ref([
 ]);
 </script>
 <template>
-  <div class="py-24 sm:py-32">
-    <div
-      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col"
-    >
-      <div class="text-center flex flex-col items-center">
-        <h2
-          class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
-        >
-          <span
-            >Trusted by the<br />
-            <span class="text-amber-800">World Wide Web.</span>
-          </span>
-        </h2>
-      </div>
-      <div class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+  <div
+    class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col"
+  >
+    <div class="text-center flex flex-col items-center">
+      <h2
+        class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+      >
+        <span
+          >Trusted by the<br />
+          <span class="text-amber-800">World Wide Web.</span>
+        </span>
+      </h2>
+    </div>
+    <div class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+      <div
+        class="break-inside-avoid"
+        v-for="(review, index) in reviews"
+        :key="index"
+      >
         <div
-          class="break-inside-avoid"
-          v-for="(review, index) in reviews"
-          :key="index"
+          class="rounded-xl divide-y divide-gray-200 ring-1 ring-gray-200 shadow bg-white relative"
         >
-          <div
-            class="rounded-xl divide-y divide-gray-200 ring-1 ring-gray-200 shadow bg-white relative"
-          >
-            <!---->
-            <div class="flex flex-col px-4 py-5 sm:p-6">
-              <div>
-                <q class="text-gray-600">
-                  {{ review.text }}
-                </q>
-                <div class="flex items-center gap-3 mt-6 relative">
-                  <div>
-                    <p
-                      class="font-semibold text-gray-900 dark:text-white text-sm"
-                    >
-                      {{ review.name }}
-                    </p>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">
-                      {{ review.role }}
-                    </p>
-                  </div>
+          <!---->
+          <div class="flex flex-col px-4 py-5 sm:p-6">
+            <div>
+              <q class="text-gray-600">
+                {{ review.text }}
+              </q>
+              <div class="flex items-center gap-3 mt-6 relative">
+                <div>
+                  <p
+                    class="font-semibold text-gray-900 dark:text-white text-sm"
+                  >
+                    {{ review.name }}
+                  </p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm">
+                    {{ review.role }}
+                  </p>
                 </div>
               </div>
             </div>

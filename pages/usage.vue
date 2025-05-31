@@ -1,9 +1,9 @@
 <template>
-    <div class="py-24 sm:py-32">
+    <div class="py-8">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24">
       <div class="text-center items-center">
         <h2
-          class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl pb-6"
         >
           <span
             >Start doing<br />
@@ -11,8 +11,8 @@
           </span>
         </h2>
       </div>
-      <div class="my-4">
-        <p class="text-md text-muted-foreground">
+      <div class="my-4 ">
+        <p class="text-lg font-bold text-muted-foreground">
           This package helps you generate CRUD operations for your Laravel application with ease. The following modules of your CRUD should be generated iteratively:
         </p>
         <ul class="list-decimal list-inside text-md text-muted-foreground ml-4">
@@ -28,7 +28,7 @@
         <h1 class="text-gray-900 text-lg text-base font-semibold">
           {{ step.description }}
         </h1>
-        <CodeBlock :commands="step.commands" :preview="step.preview ?? null" />
+        <CodeBlock :commands="step.commands" :preview="step.preview ?? null" :showCopyButton="false" />
       </div>
       <button 
           @click="nextStep" 
